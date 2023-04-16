@@ -1,0 +1,18 @@
+<%- include('partials/header'); %>
+<div class="container">
+  <div class="row">
+    <div class="col-4 mt-5 mx-auto">
+      <h3 class="display-4" align="center">Kadavusol</h3>
+      <h5 class="card-title mt-2" align="center">Login to continue</h5>
+      <form action="/login" method="post">
+        <input type="text" class="form-control shadow-sm mt-3 mb-2" name="username" id="username" placeholder="Username" required>
+        <input type="password" name="password" id="password" class="form-control mb-2 shadow-sm" placeholder="Password" required>
+        <div class="d-flex align-items-center">
+          <button type="submit" class="ms-auto btn btn-primary mt-2 me-2">Login</button>
+          <a class="btn btn-light mt-2 me-auto border" href="/register" role="button">New User ></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer'); %>

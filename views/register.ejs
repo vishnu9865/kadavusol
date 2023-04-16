@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold">Register Here</h1>
+  <div class="col-lg-3 mx-auto">
+      <form action="/register" method="POST">
+          <div class="mb-2">
+              <!-- <label for="username" class="form-label">Username</label> -->
+              <input type="text" class="form-control" name="username" placeholder="your-email@example.com" required>
+          </div>
+          <div class="mb-2">
+              <!-- <label for="password" class="form-label">Password</label> -->
+              <input type="password" class="form-control" name="password" placeholder="Your Password" required>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2">Sign Up & Login ></button>
+      </form>
+  </div>
+<%- include("partials/footer"); -%>

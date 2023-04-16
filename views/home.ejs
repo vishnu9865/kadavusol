@@ -1,0 +1,35 @@
+<%- include('partials/header'); %>
+  <%- include('partials/navbar') %> 
+  <div class="container">
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th rowspan="2">#</th>
+          <th rowspan="2">Website</th>
+          <th colspan="1">Link</th>
+          <th colspan="1">password</th>
+          <th colspan="2">Actions</th>
+        </tr>
+        <tbody>
+          <% let itr = 1; %>
+          <% passwordTable.forEach( element => { %>
+            <tr>
+              <td><%= itr %></td>
+              <td><%= element.title %></td>  
+              <td><a target="_blank" href="https://<%= element.website %>">Link</a></td>
+              <td><button class="btn bg-body-tertiary border shadow-sm" id="copyButton" value="<%= element.password %>">Copy</button></td>
+              <td>
+                <a class="btn btn-outline-warning" href="/edit/<%= element._id %>">Edit</a>
+              </td>
+              <td>
+                <a class="btn btn-outline-danger" href="/delete/<%=element._id%>">Delete</a>
+              </td>
+            </tr>
+          <% }); %>
+          <% itr ++; %>
+        </tbody>
+      </thead>
+    </table>
+  </div>
+  <script src="script.js"></script>
+<%- include('partials/footer'); %>
